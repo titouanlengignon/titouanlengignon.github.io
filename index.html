@@ -1,14 +1,85 @@
 <!DOCTYPE html>
+
 <html>
+
+<!-- lien -->
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<!-- menu -->
+  <nav>
+    <a href="menu.html">
+      <button class="menu-button">Menu</button>
+    </a>
+  </nav>
+  
+  <!-- boutton du haut -->
 <head>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <div class="header-button">
+    <a href="https://www.linkedin.com/in/titouan-lengignon-922977287/" target="_blank"><button class="header-buttonLinkedin">LinkedIn</button></a>
+    <a href="mailto:lengignontitouan@gmail.com"><button class="header-buttonEmail">E-mail</button></a>
+    <a href="cv.pdf" target="_blank"><button class="header-buttonCV">CV</button></a>
+  </div>
+
+  <!-- info (lieu heure) -->
+  <div class="header-info">
+    <div class="heure">
+      <p>Heure : <span id="heure"></span></p>
+    </div>
+    <div class="lieu">
+      <p>Lieu : Brest, Fr</p>
+  </div>
+
+  <!-- langue -->
+  <div class="langswitch">
+    <button class="header-buttonlangswitch"> Fr | En </button>
+  </div>
+
 </head>
+
 <body>
-  <h1>Titre de la page</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+<!-- contenu -->
+<h1 id="texte-francais">Titouan Lengignon</h1>
+<h1 id="texte-anglais" style="display: none;">Titouan Lengignon</h1>
+<p id="texte-francais"> lo Ceci est ma presentation en francais</p>
+<p id="texte-anglais" style="display: none;"> This is my presentation in English</p>  
+  <!-- footer -->
   <footer>
-    <p>&copy; 2023 Votre nom</p>
+    <p>&copy; 2024 Titouan Lengignon</p>
   </footer>
+
+  <!-- heure -->
+  <script>
+    function afficherHeure() {
+      var heure = new Date();
+      var heures = heure.getHours();
+      var minutes = heure.getMinutes();
+      var secondes = heure.getSeconds();
+      var texteHeure = heures + ":" + minutes + ":" + secondes;
+      document.getElementById("heure").innerHTML = texteHeure;
+    }
+  
+    setInterval(afficherHeure, 1000);
+  </script>
+
+<script>
+  var texteFrancais = document.getElementById("texte-francais");
+  var texteAnglais = document.getElementById("texte-anglais");
+  
+  function switchLang() {
+    if (texteFrancais.style.display === "block") {
+      texteFrancais.style.display = "none";
+      texteAnglais.style.display = "block";
+      document.querySelector(".header-buttonlangswitch").textContent = "Fr | En";
+    } else {
+      texteFrancais.style.display = "block";
+      texteAnglais.style.display = "none";
+      document.querySelector(".header-buttonlangswitch").textContent = "En | Fr";
+    }
+  }
+  
+  var buttonlangswitch = document.querySelector(".header-buttonlangswitch");
+  buttonlangswitch.addEventListener("click", switchLang);
+</script>
+
 </body>
 </html>

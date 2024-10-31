@@ -1,6 +1,6 @@
 body {
-    background-color: #2f343f;
-    color: #c72222;
+    background-color: #212224;
+    color: #ffffff;
   }
   
   footer {
@@ -13,3 +13,80 @@ body {
     background-color: #34c759;
     color: #ffffff;
   }
+/* menu */
+  .menu-button {
+    background-color: #7a49a5;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  .menu-button:hover {
+    background-color: #701eb8;
+  }
+
+
+  
+/* boutton du haut */
+  .header-buttonCV {
+    background-color: #34c759;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  .header-buttonCV:hover {
+    background-color: #00a772;
+  }
+  .header-buttonCV {
+    float: right;
+  }
+
+  .header-buttonLinkedin {
+    background-color: #34c759;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  .header-buttonLinkedin:hover {
+    background-color: #00a772;
+  }
+  .header-buttonLinkedin {
+    float: right;
+  }
+
+  .header-buttonEmail {
+    background-color: #34c759;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  .header-buttonEmail:hover {
+    background-color: #00a772;
+  }
+  .header-buttonEmail {
+    float: right;
+  }
+
+  /* info (lieu heure) */
+  .header-info {
+    float: right;
+    margin-left: 20px;
+  }
+
+  /* switch langue */
+  .header-buttonlangswitch {
+    background-color: #7a49a5;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    margin-left: 10px;
+  }
+  .header-buttonlangswitch:hover {
+    background-color: #701eb8;
+  }
+  
